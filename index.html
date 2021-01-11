@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<style>
+    #main {
+        background: url(IMG_5030.JPG) fixed;
+        background-repeat: no-repeat;
+        background-size: 1400px 900px;
+        background-position-x: center;
+        background-color: hsla(240, 80%, 50%, 0.40);
+        background-blend-mode: overlay;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #survey-form {
+        background-color: hsla(240, 60%, 10%, 0.70);
+        width: 700px;
+        max-width: 90%;
+        height: auto;
+        border-radius: 5px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-item {
+        width: 500px;
+        max-width: 90%;
+        border-radius: 5px;
+        display: flex;
+        margin: auto;
+    }
+
+    #title,
+    #description,
+    label,
+    fieldset,
+    #submit {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #title,
+    #description {
+        text-align: center;
+    }
+
+    #div-label {
+        padding: 15px 5px 10px 5px;
+    }
+
+    #div-input {
+        padding-bottom: 15px;
+    }
+
+    #name,
+    #email,
+    #number {
+        height: 25px;
+    }
+
+    #dropdown {
+        height: 30px;
+    }
+
+    #fieldset-recommend,
+    #fieldset-improve {
+        height: auto;
+        display: block;
+    }
+
+    #comments {
+        min-height: 50px;
+        resize: vertical;
+    }
+
+    #submit {
+        height: 35px;
+        display: block;
+        text-align: center;
+        background-color: rgb(7, 206, 7);
+    }
+</style>
+
+<head>
+
+</head>
+
+<body id="main">
+    <header>
+        <br>
+        <h1 id="title">Formularz ankietowy</h1>
+        <p id="description">Wypełnij wszystko jak należy</p>
+        <br>
+    </header>
+
+    <form id="survey-form">
+        <br>
+        <div id="div-label">
+            <label class="form-item" id="name-label" for="name">Name</label>
+        </div>
+        <div id="div-input">
+            <input class="form-item" type="text" id="name" required placeholder="Adam Kowalski">
+        </div>
+        <div id="div-label">
+            <label class="form-item" id="email-label" for="email">Email</label>
+        </div>
+        <div id="div-input">
+            <input class="form-item" type="email" id="email" required placeholder="your@email.com"
+                pattern="[^@]+@[^\.]+\..+" title="Enter your@email.com">
+        </div>
+        <div id="div-label">
+            <label class="form-item" id="number-label" for="number">Age (optional)</label>
+        </div>
+        <div id="div-input">
+            <input class="form-item" type="number" id="number" min="10" max="150" placeholder="25">
+        </div>
+        <div id="div-label">
+            <label class="form-item" id="dropdown-label" for="dropdown">
+                Which option best describes your perfect car?
+            </label>
+        </div>
+        <div id="div-input">
+            <select id="dropdown" class="form-item">
+                <option value="Select" disabled>Select your car</option>
+                <option value="Nysa">Nysa</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Trabant">Trabant</option>
+                <option value="Syrena">Syrena</option>
+                <option value="Honker">Tarpan Honker</option>
+                <option value="Moskwicz">Moskwicz</option>
+            </select>
+        </div>
+        <div id="div-label">
+            <fieldset class="form-item" id="fieldset-recommend">
+                <legend>Would you recommend your car to a friend?</legend>
+                <input type="radio" id="radio-one" name="items" value="radio-one">
+                <label id="radio-one-label" for="radio-one">Naturally...</label>
+                <br>
+                <input type="radio" id="radio-two" name="items" value="radio-two">
+                <label id="radio-two-label" for="radio-two">Yeah...</label>
+                <br>
+                <input type="radio" id="radio-three" name="items" value="radio-three">
+                <label id="radio-three-label" for="radio-three">Well...</label>
+            </fieldset>
+        </div>
+        <div id="div-label">
+            <label class="form-item" id="dropdown-label" for="dropdown">
+                What is your favorite feature of your car?
+            </label>
+        </div>
+        <div id="div-input">
+            <select id="dropdown" class="form-item">
+                <option value="Select" disabled>Select an option</option>
+                <option value="Smoke">Smoke</option>
+                <option value="Rust">Rust</option>
+                <option value="Shape">Trapezoidal shape</option>
+                <option value="Sound">2-stroke motor sound</option>
+                <option value="Unreliability">Unreliability</option>
+                <option value="Radio">Radio Safari</option>
+            </select>
+        </div>
+        <div id="div-label">
+            <fieldset class="form-item" id="fieldset-improve">
+                <legend>What would you like to see improved? (Check all that apply)</legend>
+                <input type="checkbox" id="check-one" name="items" value="check-one">
+                <label id="check-one-label" for="check-one">Nothing</label>
+                <br>
+                <input type="checkbox" id="check-two" name="items" value="check-two">
+                <label id="check-two-label" for="check-two">It's perfect</label>
+                <br>
+                <input type="checkbox" id="check-three" name="items" value="check-three">
+                <label id="check-three-label" for="check-three">Wow...</label>
+            </fieldset>
+        </div>
+        <div id="div-label">
+            <label class="form-item" id="comments-label" for="comments">Any comments or suggestions?</label>
+        </div>
+        <div id="div-input">
+            <textarea class="form-item" id="comments" name="comments"
+                placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div id="div-label">
+            <label class="form-item" id="submit-label" for="submit"></label>
+        </div>
+        <div id="div-input">
+            <input class="form-item" type="submit" id="submit" value="Vomit!">
+        </div>
+        <br>
+    </form>
+
+</body>
